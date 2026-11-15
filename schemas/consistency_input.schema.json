@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "consistency_input.v1",
+  "title": "Consistency Checking Agent - Input Contract",
+  "description": "Đây CHÍNH LÀ nơi ép buộc output của Architecture Extraction Agent + Code Analysis Agent phải khớp với input của Consistency Checking Agent: 'architecture_findings' tham chiếu thẳng tới properties/findings của architecture_finding.v1, 'code_elements' tham chiếu thẳng tới properties/elements của code_finding.v1. Nếu 1 trong 2 agent đổi cấu trúc output mà không cập nhật schema gốc, bước validate ở agent thứ 3 sẽ báo lỗi ngay, không cần chờ chạy sai.",
+  "type": "object",
+  "required": [
+    "run_id",
+    "project",
+    "architecture_findings",
+    "code_elements",
+    "retrieved_reference_cases"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "project": {
+      "type": "string"
+    },
+    "architecture_findings": {
+      "$ref": "architecture_finding.v1#/properties/findings"
+    },
+    "code_elements": {
+      "$ref": "code_finding.v1#/properties/elements"
+    },
+    "retrieved_reference_cases": {
+      "type": "array",
+      "description": "Kết quả RAG: top-k case gần nhất lấy từ Reference Store (Chroma), dùng làm few-shot ngay trong input của agent này",
+      "items": {
+        "$ref": "reference_case.v1"
+      }
+    }
+  }
+}

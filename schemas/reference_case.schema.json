@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "reference_case.v1",
+  "title": "Reference Case",
+  "description": "Một case đã được gán nhãn / xác minh, sống trong Reference Store. Dùng làm ví dụ mẫu (RAG / few-shot) cho Consistency Checking Agent.",
+  "type": "object",
+  "required": [
+    "case_id",
+    "project",
+    "case_type",
+    "label",
+    "verified",
+    "source"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "description": "VD: bbb_sad6_sam_yGgUM"
+    },
+    "project": {
+      "type": "string"
+    },
+    "case_type": {
+      "enum": [
+        "sad_sam",
+        "sad_code",
+        "sam_code",
+        "undocumented"
+      ],
+      "description": "sad_sam = câu văn bản <-> phần tử kiến trúc; sad_code = câu <-> code; sam_code = phần tử kiến trúc <-> code; undocumented = phần tử model không có trong văn bản"
+    },
+    "sentence_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "sentence_text": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model_element_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model_element_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "code_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "label": {
+      "enum": [
+        1,
+        0,
+        "undocumented"
+      ],
+      "description": "1 = liên kết đúng, 0 = cặp âm (không liên kết), undocumented = có trong model nhưng thiếu trong văn bản"
+    },
+    "verified": {
+      "type": "boolean"
+    },
+    "source": {
+      "enum": [
+        "ardoco_goldstandard",
+        "manual_review",
+        "agent_promoted"
+      ]
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "consistency_output.v1",
+  "title": "Consistency Checking Agent - Output",
+  "description": "Ghi vào runtime_store/runs/<run>/consistency_results.json. Coordinator Agent đọc file này để quyết định bước tiếp theo (gửi Reporting Agent hay retry).",
+  "type": "object",
+  "required": [
+    "run_id",
+    "project",
+    "produced_by",
+    "results"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "project": {
+      "type": "string"
+    },
+    "produced_by": {
+      "const": "consistency_checking_agent"
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "sentence_id",
+          "element_id",
+          "label",
+          "confidence",
+          "evidence",
+          "verified"
+        ],
+        "properties": {
+          "sentence_id": {
+            "type": "integer"
+          },
+          "element_id": {
+            "type": "string"
+          },
+          "label": {
+            "enum": [
+              "match",
+              "no_match",
+              "undocumented"
+            ]
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "evidence": {
+            "type": "string",
+            "description": "Trích dẫn ngắn lý do - để con người audit nhanh"
+          },
+          "verified": {
+            "type": "boolean",
+            "description": "false cho tới khi người review xác nhận; chỉ case verified=true mới được promote vào Reference Store"
+          }
+        }
+      }
+    }
+  }
+}

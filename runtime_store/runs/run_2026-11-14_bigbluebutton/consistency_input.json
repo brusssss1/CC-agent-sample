@@ -1,0 +1,175 @@
+{
+  "run_id": "run_2026-11-14_bigbluebutton",
+  "project": "bigbluebutton",
+  "architecture_findings": [
+    {
+      "sentence_id": 61,
+      "sentence_text": "FreeSWITCH.",
+      "mentioned_elements": [
+        "FreeSWITCH"
+      ]
+    },
+    {
+      "sentence_id": 62,
+      "sentence_text": "We think FreeSWITCH is an amazing piece of software for handling audio.",
+      "mentioned_elements": [
+        "FreeSWITCH"
+      ]
+    },
+    {
+      "sentence_id": 63,
+      "sentence_text": "FreeSWITCH provides the voice conferencing capability in BigBlueButton.",
+      "mentioned_elements": [
+        "FreeSWITCH",
+        "BigBlueButton"
+      ]
+    },
+    {
+      "sentence_id": 67,
+      "sentence_text": "Kurento and WebRTC-SFU.",
+      "mentioned_elements": [
+        "Kurento",
+        "WebRTC-SFU"
+      ]
+    },
+    {
+      "sentence_id": 70,
+      "sentence_text": "The WebRTC-SFU acts as the media controller handling negotiations and to manage the media streams.",
+      "mentioned_elements": [
+        "WebRTC-SFU"
+      ]
+    }
+  ],
+  "code_elements": [
+    {
+      "element_id": "acm001576jsd",
+      "element_name": "freeswitch",
+      "element_type": "package",
+      "path": [
+        "akka-bbb-fsesl",
+        "src",
+        "main",
+        "java",
+        "org",
+        "bigbluebutton",
+        "freeswitch"
+      ]
+    },
+    {
+      "element_id": "acm001573jsd",
+      "element_name": "ConferenceServerListener",
+      "element_type": "compilation_unit",
+      "path": [
+        "akka-bbb-fsesl",
+        "src",
+        "main",
+        "java",
+        "org",
+        "bigbluebutton",
+        "freeswitch",
+        "voice"
+      ]
+    },
+    {
+      "element_id": "acm001583jsd",
+      "element_name": "FreeswitchConferenceEventListener",
+      "element_type": "compilation_unit",
+      "path": [
+        "akka-bbb-fsesl",
+        "src",
+        "main",
+        "java",
+        "org",
+        "bigbluebutton",
+        "freeswitch",
+        "voice"
+      ]
+    },
+    {
+      "element_id": "acm006241jsd",
+      "element_name": "bbb-webrtc-sfu.placeholder",
+      "element_type": "compilation_unit",
+      "path": []
+    }
+  ],
+  "retrieved_reference_cases": [
+    {
+      "case_id": "n/a-from-chroma",
+      "project": "bigbluebutton",
+      "case_type": "sad_sam",
+      "sentence_id": null,
+      "sentence_text": "FreeSWITCH.",
+      "model_element_id": null,
+      "model_element_name": "FreeSWITCH",
+      "code_path": null,
+      "label": 1,
+      "verified": true,
+      "source": "ardoco_goldstandard"
+    },
+    {
+      "case_id": "n/a-from-chroma",
+      "project": "bigbluebutton",
+      "case_type": "sad_sam",
+      "sentence_id": null,
+      "sentence_text": "FreeSWITCH.",
+      "model_element_id": null,
+      "model_element_name": "BBB web",
+      "code_path": null,
+      "label": 0,
+      "verified": true,
+      "source": "ardoco_goldstandard"
+    },
+    {
+      "case_id": "n/a-from-chroma",
+      "project": "bigbluebutton",
+      "case_type": "sad_sam",
+      "sentence_id": null,
+      "sentence_text": "We think FreeSWITCH is an amazing piece of software for handling audio.",
+      "model_element_id": null,
+      "model_element_name": "FreeSWITCH",
+      "code_path": null,
+      "label": 1,
+      "verified": true,
+      "source": "ardoco_goldstandard"
+    },
+    {
+      "case_id": "n/a-from-chroma",
+      "project": "bigbluebutton",
+      "case_type": "sad_sam",
+      "sentence_id": null,
+      "sentence_text": "We think FreeSWITCH is an amazing piece of software for handling audio.",
+      "model_element_id": null,
+      "model_element_name": "Redis PubSub",
+      "code_path": null,
+      "label": 0,
+      "verified": true,
+      "source": "ardoco_goldstandard"
+    },
+    {
+      "case_id": "n/a-from-chroma",
+      "project": "bigbluebutton",
+      "case_type": "sad_sam",
+      "sentence_id": null,
+      "sentence_text": "FreeSWITCH provides the voice conferencing capability in BigBlueButton.",
+      "model_element_id": null,
+      "model_element_name": "FreeSWITCH",
+      "code_path": null,
+      "label": 1,
+      "verified": true,
+      "source": "ardoco_goldstandard"
+    },
+    {
+      "case_id": "n/a-from-chroma",
+      "project": "bigbluebutton",
+      "case_type": "sad_sam",
+      "sentence_id": null,
+      "sentence_text": "FreeSWITCH provides the voice conferencing capability in BigBlueButton.",
+      "model_element_id": null,
+      "model_element_name": "Redis DB",
+      "code_path": null,
+      "label": 0,
+      "verified": true,
+      "source": "ardoco_goldstandard"
+    }
+  ]
+}

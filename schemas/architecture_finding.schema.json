@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "architecture_finding.v1",
+  "title": "Architecture Extraction Agent - Output",
+  "description": "Đúng nhãn 'ghi raw findings' trong sơ đồ LangGraph. Agent đọc Tài liệu kiến trúc (Input) + 'chiến lược quét' (Runtime Store), ghi ra danh sách câu và các phần tử kiến trúc được nhắc tới trong từng câu.",
+  "type": "object",
+  "required": [
+    "run_id",
+    "project",
+    "produced_by",
+    "findings"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "project": {
+      "type": "string"
+    },
+    "produced_by": {
+      "const": "architecture_extraction_agent"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "sentence_id",
+          "sentence_text",
+          "mentioned_elements"
+        ],
+        "properties": {
+          "sentence_id": {
+            "type": "integer"
+          },
+          "sentence_text": {
+            "type": "string"
+          },
+          "mentioned_elements": {
+            "type": "array",
+            "description": "Tên phần tử kiến trúc (component) mà agent NGHĨ câu này đang nhắc tới - đây là 'ứng viên', chưa phải phán quyết cuối cùng",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

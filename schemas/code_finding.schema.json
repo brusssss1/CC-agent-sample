@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "code_finding.v1",
+  "title": "Code Analysis Agent - Output",
+  "description": "Đúng nhãn 'ghi unified findings + delta' trong sơ đồ LangGraph. Agent đọc Mã nguồn (Input) + 'đọc dữ liệu cũ + new data' từ Runtime Store, ghi ra danh sách phần tử code đã phân tích được.",
+  "type": "object",
+  "required": [
+    "run_id",
+    "project",
+    "produced_by",
+    "elements"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "project": {
+      "type": "string"
+    },
+    "produced_by": {
+      "const": "code_analysis_agent"
+    },
+    "elements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "element_id",
+          "element_name",
+          "element_type",
+          "path"
+        ],
+        "properties": {
+          "element_id": {
+            "type": "string"
+          },
+          "element_name": {
+            "type": "string"
+          },
+          "element_type": {
+            "enum": [
+              "package",
+              "compilation_unit",
+              "class",
+              "module"
+            ]
+          },
+          "path": {
+            "type": "array",
+            "description": "pathElements giống trong ArDoCo Code Model, VD: [\"bigbluebutton-html5\", \"imports\", \"startup\", \"server\"]",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

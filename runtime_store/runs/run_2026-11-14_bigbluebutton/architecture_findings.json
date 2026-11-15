@@ -1,0 +1,32 @@
+{
+  "run_id": "run_2026-11-14_bigbluebutton",
+  "project": "bigbluebutton",
+  "produced_by": "architecture_extraction_agent",
+  "findings": [
+    {
+      "sentence_id": 61,
+      "sentence_text": "FreeSWITCH.",
+      "mentioned_elements": ["FreeSWITCH"]
+    },
+    {
+      "sentence_id": 62,
+      "sentence_text": "We think FreeSWITCH is an amazing piece of software for handling audio.",
+      "mentioned_elements": ["FreeSWITCH"]
+    },
+    {
+      "sentence_id": 63,
+      "sentence_text": "FreeSWITCH provides the voice conferencing capability in BigBlueButton.",
+      "mentioned_elements": ["FreeSWITCH", "BigBlueButton"]
+    },
+    {
+      "sentence_id": 67,
+      "sentence_text": "Kurento and WebRTC-SFU.",
+      "mentioned_elements": ["Kurento", "WebRTC-SFU"]
+    },
+    {
+      "sentence_id": 70,
+      "sentence_text": "The WebRTC-SFU acts as the media controller handling negotiations and to manage the media streams.",
+      "mentioned_elements": ["WebRTC-SFU"]
+    }
+  ]
+}

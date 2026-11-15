@@ -1,0 +1,8 @@
+{
+  "strategy_id": "bbb_default_v1",
+  "project": "bigbluebutton",
+  "sentence_range": [61, 70],
+  "model_sources": ["model_2021/pcm/bbb.repository"],
+  "code_sources": ["model_2023/code/codeModel.acm"],
+  "note": "Đây là 'đọc chiến lược quét' trong sơ đồ - quyết định quét đoạn nào của tài liệu/code, agent nào bật/tắt."
+}

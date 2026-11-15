@@ -1,0 +1,31 @@
+{
+  "run_id": "run_2026-11-14_bigbluebutton",
+  "project": "bigbluebutton",
+  "produced_by": "code_analysis_agent",
+  "elements": [
+    {
+      "element_id": "acm001576jsd",
+      "element_name": "freeswitch",
+      "element_type": "package",
+      "path": ["akka-bbb-fsesl", "src", "main", "java", "org", "bigbluebutton", "freeswitch"]
+    },
+    {
+      "element_id": "acm001573jsd",
+      "element_name": "ConferenceServerListener",
+      "element_type": "compilation_unit",
+      "path": ["akka-bbb-fsesl", "src", "main", "java", "org", "bigbluebutton", "freeswitch", "voice"]
+    },
+    {
+      "element_id": "acm001583jsd",
+      "element_name": "FreeswitchConferenceEventListener",
+      "element_type": "compilation_unit",
+      "path": ["akka-bbb-fsesl", "src", "main", "java", "org", "bigbluebutton", "freeswitch", "voice"]
+    },
+    {
+      "element_id": "acm006241jsd",
+      "element_name": "bbb-webrtc-sfu.placeholder",
+      "element_type": "compilation_unit",
+      "path": []
+    }
+  ]
+}

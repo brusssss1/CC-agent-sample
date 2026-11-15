@@ -1,0 +1,47 @@
+{
+  "run_id": "run_2026-11-14_bigbluebutton",
+  "project": "bigbluebutton",
+  "produced_by": "consistency_checking_agent",
+  "results": [
+    {
+      "sentence_id": 61,
+      "element_id": "acm001576jsd",
+      "label": "match",
+      "confidence": 0.95,
+      "evidence": "Tên/đường dẫn code 'freeswitch' (akka-bbb-fsesl/src/main/java/org/bigbluebutton/freeswitch) khớp với từ khoá trong câu.",
+      "verified": false
+    },
+    {
+      "sentence_id": 62,
+      "element_id": "acm001576jsd",
+      "label": "match",
+      "confidence": 0.95,
+      "evidence": "Tên/đường dẫn code 'freeswitch' (akka-bbb-fsesl/src/main/java/org/bigbluebutton/freeswitch) khớp với từ khoá trong câu.",
+      "verified": false
+    },
+    {
+      "sentence_id": 63,
+      "element_id": "acm001576jsd",
+      "label": "match",
+      "confidence": 0.95,
+      "evidence": "Tên/đường dẫn code 'freeswitch' (akka-bbb-fsesl/src/main/java/org/bigbluebutton/freeswitch) khớp với từ khoá trong câu.",
+      "verified": false
+    },
+    {
+      "sentence_id": 67,
+      "element_id": "acm006241jsd",
+      "label": "match",
+      "confidence": 0.8,
+      "evidence": "Tên/đường dẫn code 'bbb-webrtc-sfu.placeholder' (no path) khớp với từ khoá trong câu.",
+      "verified": false
+    },
+    {
+      "sentence_id": 70,
+      "element_id": "acm006241jsd",
+      "label": "match",
+      "confidence": 0.8,
+      "evidence": "Tên/đường dẫn code 'bbb-webrtc-sfu.placeholder' (no path) khớp với từ khoá trong câu.",
+      "verified": false
+    }
+  ]
+}
